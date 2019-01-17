@@ -1,0 +1,85 @@
+{
+  "ResponseSet" : [
+     {
+      "name": "responseMessage",
+      "type": "string",
+      "data": [
+        {
+          "variable": "READ_DDD",
+          "value": "회원정보 조회"
+        },
+        {
+          "variable": "READ_DDD",
+          "value": "회원정보 조회"
+        },
+        {
+          "variable": "READ_DDD",
+          "value": "회원정보 조회"
+        }
+      ]
+    },
+    {
+      "name": "statusCode",
+      "type": "int",
+      "data": [
+        {
+          "variable": "OK",
+          "value": 200,
+          "desc": "서버가 요청을 제대로 처리했다는 뜻이다. 이는 주로 서버가 요청한 페이지를 제공했다는 의미로 쓰인다."
+        },
+        {
+          "variable": "CREATE",
+          "value": 201,
+          "desc": "성공적으로 요청되었으며 서버가 새 리소스를 작성했다."
+        },
+        {
+          "variable": "NO_CONTENT",
+          "value": 204,
+          "desc": "서버가 요청을 성공적으로 처리했지만 콘텐츠를 제공하지 않는다."
+        },
+        {
+          "variable": "BAD_REQUEST",
+          "value": 400,
+          "desc": "서버가 요청의 구문을 인식하지 못했다."
+        },
+        {
+          "variable": "UNAUTHORIZED",
+          "value": 401,
+          "desc": "이 요청은 인증이 필요하다. 서버는 로그인이 필요한 페이지에 대해 이 요청을 제공할 수 있다. (인증 안됨에 가깝다.)"
+        },
+        {
+          "variable": "FORBIDDEN",
+          "value": 403,
+          "desc": "서버가 요청을 거부하고 있다. 예를 들자면, 사용자가 리소스에 대한 필요 권한을 갖고 있지 않다. (401은 인증 실패, 403은 인가 실패라고 볼 수 있음)"
+        },
+        {
+          "variable": "NOT_FOUND",
+          "value": 404,
+          "desc": "서버가 요청한 페이지(Resource)를 찾을 수 없다. 예를 들어 서버에 존재하지 않는 페이지에 대한 요청이 있을 경우 서버는 이 코드를 제공한다."
+        },
+        {
+          "variable": "CONFLICT",
+          "value": 409,
+          "desc": "리소스의 현재 상태와 충돌해서 요청을 처리할 수 없으므로 클라이언트가 요청을 다시 클라이언트가 이 충돌을 수정해서 요청을 다시 보낼 경우"
+        },
+        {
+          "variable": "INTERNAL_SERVER_ERROR",
+          "value": 500,
+          "desc": "서버에 오류가 발생하여 요청을 수행할 수 없다."
+        },
+        {
+          "variable": "SERVICE_UNAVAILABLE",
+          "value": 503,
+          "desc": "서버가 오버로드되었거나 유지관리를 위해 다운되었기 때문에 현재 서버를 사용할 수 없다."
+        },
+        {
+          "variable": "DB_ERROR",
+          "value": 600,
+          "desc": "database error"
+        }
+      ]
+    } 
+  ]
+}
+
+    
