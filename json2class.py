@@ -7,7 +7,7 @@ class_footer = "}"
 
 def readJson():
 	# open json
-	with open(sys.argv[1], encoding="utf-8") as data_file:
+	with open(sys.argv[1], encoding="utf-8-sig") as data_file:
 		data = json.load(data_file)
 	return data
 
@@ -31,7 +31,7 @@ class Json2Class():
 	def saveClass(self):
 		if not os.path.exists("output"):
 		    os.makedirs("output")
-		f = open("output/" + self.dic['name'] + ".class", "w", encoding="utf-8")
+		f = open("output/" + self.dic['name'] + ".java", "w", encoding="utf-8")
 		f.write(self.content)
 		f.close()
 
