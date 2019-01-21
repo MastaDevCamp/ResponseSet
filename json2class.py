@@ -2,7 +2,7 @@
 import json, sys, os
 
 class_header = "public class #className {\n"
-variable_format = '\tpublic static final #type #varName = "#data";\n'
+variable_format = '\tpublic static final #type #varName = "#data"; #desc\n'
 class_footer = "}"
 
 def readJson():
@@ -23,7 +23,10 @@ class Json2Class():
 		self.content += class_header.replace("#className", self.dic['name'])
 		data = ""
 		for val in self.dic['data']:
-			data += self.variable_format.replace("#varName", val['variable']).replace("#data", str(val['value']))				
+			if self.dic['name'] == "StatusCode":
+				data += self.variable_format.replace("#varName", val['variable']).replace("#data", str(val['value'])).replace("#desc","// "+ val['desc'])
+			else:
+				data += self.variable_format.replace("#varName", val['variable']).replace("#data", str(val['value'])).replace("#desc", "")				
 		self.content += data
 		self.content += class_footer
 		return data
